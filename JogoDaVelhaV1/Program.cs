@@ -6,6 +6,7 @@ namespace JogoDaVelhaV1
     {
         public static void Main(string[] args)
         {
+            new JogoDaVelha().Iniciar();
 
         }
     }

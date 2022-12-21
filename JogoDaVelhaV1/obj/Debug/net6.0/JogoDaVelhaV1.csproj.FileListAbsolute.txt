@@ -1,0 +1,15 @@
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\bin\Debug\net6.0\JogoDaVelhaV1.exe
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\bin\Debug\net6.0\JogoDaVelhaV1.deps.json
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\bin\Debug\net6.0\JogoDaVelhaV1.runtimeconfig.json
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\bin\Debug\net6.0\JogoDaVelhaV1.dll
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\bin\Debug\net6.0\JogoDaVelhaV1.pdb
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\JogoDaVelhaV1.csproj.AssemblyReference.cache
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\JogoDaVelhaV1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\JogoDaVelhaV1.AssemblyInfoInputs.cache
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\JogoDaVelhaV1.AssemblyInfo.cs
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\JogoDaVelhaV1.csproj.CoreCompileInputs.cache
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\JogoDaVelhaV1.dll
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\refint\JogoDaVelhaV1.dll
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\JogoDaVelhaV1.pdb
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\JogoDaVelhaV1.genruntimeconfig.cache
+C:\Users\felip\Documents\C#-SharpCode\ProjetoEmAula\JogoDaVelhaV1\JogoDaVelhaV1\obj\Debug\net6.0\ref\JogoDaVelhaV1.dll
