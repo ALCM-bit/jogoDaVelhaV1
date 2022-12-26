@@ -12,6 +12,10 @@ namespace JogoDaVelhaV1
         private char[] posicoes;
         private char vez;
         private int quantidadePreenchida;
+        private int placarX = 0;
+        private int placarO = 0;
+        public static int PlacarX { get; set; }
+        public static int PlacarO { get; set; }
 
         public JogoDaVelha()
         {
@@ -19,6 +23,11 @@ namespace JogoDaVelhaV1
             posicoes = new[] {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
             vez = 'X';
             quantidadePreenchida = 0;
+        }
+        public void MostrarPlacar()
+        {
+            Console.WriteLine($"Jogador X: {PlacarX}");
+            Console.WriteLine($"Jogador O: {PlacarO}");
         }
         private void MudarVez()
         {
@@ -36,6 +45,14 @@ namespace JogoDaVelhaV1
             {
                 fimDeJogo = true;
                 Console.WriteLine($"Fim de jogo!!! Vitória de {vez}");
+                if (vez == 'X')
+                {
+                    PlacarX++;
+                }
+                else
+                {
+                    PlacarO++;
+                }
                 return;
             }
             if (quantidadePreenchida is 9)

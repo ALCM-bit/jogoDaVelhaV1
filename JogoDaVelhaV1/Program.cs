@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JogoDaVelhaV1.Sistemas;
+using System;
 
 namespace JogoDaVelhaV1
 {
@@ -6,7 +7,7 @@ namespace JogoDaVelhaV1
     {
         public static void Main(string[] args)
         {
-            new JogoDaVelha().Iniciar();
+            Sistema.IniciarSistema();
 
         }
     }
