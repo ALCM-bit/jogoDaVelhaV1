@@ -20,7 +20,11 @@ namespace JogoDaVelhaV1
                 {
                     case 1:
                         Board.ShowBoard();
-                        Console.WriteLine("Aperte ENTER para continuar");
+                        Board.PlacePiece('1');
+                        Board.ShowBoard();
+                        Board.PlacePiece('1');
+                        Board.ShowBoard();
+
                         Console.ReadKey();
                         break;
                     default:

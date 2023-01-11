@@ -9,6 +9,8 @@ namespace JogoDaVelhaV1.Models
 {
     public class Board
     {
+        public static char piece = 'X';
+        public static int times = 0;
         private static char[] positions = 
             { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
@@ -35,24 +37,31 @@ namespace JogoDaVelhaV1.Models
                 Console.Write($"|{positions[j]}|");
             }
             Console.WriteLine();
+            Console.WriteLine("Aperte ENTER para continuar");
+            Console.ReadKey();
         }
 
-        public static bool PlacePiece(char positionChosed, char vez)
+        public static bool PlacePiece(char positionChosed)
         {
             for (int i = 0; i < positions.Length; i++)
             {
                 if (positions[i] == positionChosed)
                 {
-                    positions[i] = vez;
+                    if (times%2 == 0)
+                    {
+                        piece = 'X';
+                    }
+                    else
+                    {
+                        piece = 'O';
+                    }
+                    positions[i] = piece;
+                    times++;
                     return true;
-                }
-                else
-                {
-                    Console.WriteLine("Posição escolhida já foi ocupada ou é inválida");
-                    return false;
-                }              
+                } 
             }
             Console.WriteLine("Posição Inválida");
+            Console.ReadKey();
             return false;
         }
 
