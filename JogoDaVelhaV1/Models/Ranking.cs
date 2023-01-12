@@ -22,5 +22,13 @@ namespace JogoDaVelhaV1.Models
                 _playersRankList.Add(player);
             }
         }
+
+        public static void checkPoints()
+        {
+            foreach (var item in _playersRankList)
+            {
+                Console.WriteLine(item.Name + ", " + item.Score);
+            }
+        }
     }
 }

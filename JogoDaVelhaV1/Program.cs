@@ -31,6 +31,10 @@ namespace JogoDaVelhaV1
                         Sistema.Start(board);
                         Console.ReadKey();
                         break;
+                    case 2:
+                        Ranking.checkPoints();
+                        Console.ReadKey();
+                        break;
                     default:
                         Console.WriteLine("Opção inválida");
                         break;

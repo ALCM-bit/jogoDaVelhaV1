@@ -87,7 +87,7 @@ namespace JogoDaVelhaV1.Models
                 {
                     Console.WriteLine($"Vitória de: {player1.Name}");
                     player1.Score++;
-                    Ranking.checkExistence(player2);
+                    Ranking.checkExistence(player1);
                     Console.ReadKey();
                     return 1;
 
