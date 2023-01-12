@@ -25,5 +25,6 @@ namespace JogoDaVelhaV1.Views
             Console.WriteLine("2 - Pontuação");
             Console.Write("Digite a opção desejada: ");
         }
+
     }
 }

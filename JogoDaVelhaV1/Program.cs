@@ -11,7 +11,6 @@ namespace JogoDaVelhaV1
         {
             int option = 10;
             Menus.ShowWelcome();
-
             while (option != 0)
             {
                 Menus.ShowOptions();
@@ -19,12 +18,17 @@ namespace JogoDaVelhaV1
                 switch (option)
                 {
                     case 1:
-                        Board.ShowBoard();
-                        Board.PlacePiece('1');
-                        Board.ShowBoard();
-                        Board.PlacePiece('1');
-                        Board.ShowBoard();
+                        Console.Write("Digite o Nome jogador 1: ");
+                        string name1 = Console.ReadLine();
+                        Player player1 = new Player(name1);
 
+                        Console.Write("Digite o Nome jogador 2: ");
+                        string name2 = Console.ReadLine();
+                        Player player2 = new Player(name2);
+
+                        Board board = new Board(player1, player2);
+
+                        StartGame.Start(board);
                         Console.ReadKey();
                         break;
                     default:

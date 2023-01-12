@@ -12,10 +12,9 @@ namespace JogoDaVelhaV1.Models
         public int Score { get; set; }
         public char Piece { get; set; }
 
-        public Player(string name, int score)
+        public Player(string name)
         {
             Name = name;
-            Score = score;
         }
     }
 }

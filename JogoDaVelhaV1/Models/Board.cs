@@ -11,7 +11,7 @@ namespace JogoDaVelhaV1.Models
     {
         public static char piece = 'X';
         public static int times = 0;
-        private static char[] positions = 
+        private static char[] positions =
             { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
         private Player player1;
         private Player player2;
@@ -45,8 +45,7 @@ namespace JogoDaVelhaV1.Models
                 Console.Write($"|{positions[j]}|");
             }
             Console.WriteLine();
-            Console.WriteLine("Aperte ENTER para continuar");
-            Console.ReadKey();
+            Console.Write("Escolha a posição da peça: ");
         }
 
         public bool PlacePiece(char positionChosed)
@@ -55,7 +54,7 @@ namespace JogoDaVelhaV1.Models
             {
                 if (positions[i] == positionChosed)
                 {
-                    if (times%2 == 0)
+                    if (times % 2 == 0)
                     {
                         piece = 'X';
                     }
@@ -66,20 +65,57 @@ namespace JogoDaVelhaV1.Models
                     positions[i] = piece;
                     times++;
                     return true;
-                } 
+                }
+
+                if (times >= 5)
+                    checkForVictory();
             }
             Console.WriteLine("Posição Inválida");
             Console.ReadKey();
             return false;
         }
 
-        public void checkForvictory()
+        public int checkForVictory()
         {
             if (CheckHorizontal() == true || CheckDiagonal() == true || CheckVertical() == true)
             {
-                Console.WriteLine("Vitória de" );
+                if (piece == 'X')
+                {
+                    Console.WriteLine($"Vitória de: {player1.Name}");
+                    player1.Score++;
+                    Ranking.checkExistence(player2);
+                    Console.ReadKey();
+                    return 1;
+
+                }
+                else
+                {
+                    Console.WriteLine($"Vitória de: {player2.Name}");
+                    player2.Score++;
+                    Ranking.checkExistence(player2);
+                    Console.ReadKey();
+                    return 1;
+
+                }
+                return 0;
             }
-            
+            else
+            {
+                int numberOfSpaces = 0;
+                foreach (var item in positions)
+                {
+                    if (item != 'X' && item != 'O')
+                        numberOfSpaces++;
+                }
+                if (numberOfSpaces == 0)
+                {
+                    Console.WriteLine("EMPATE");
+                    Console.ReadKey();
+                    return 1;
+                }
+                return 0;
+            }
+
 
         }
 
