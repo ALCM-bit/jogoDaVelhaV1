@@ -28,7 +28,7 @@ namespace JogoDaVelhaV1
 
                         Board board = new Board(player1, player2);
 
-                        StartGame.Start(board);
+                        Sistema.Start(board);
                         Console.ReadKey();
                         break;
                     default:

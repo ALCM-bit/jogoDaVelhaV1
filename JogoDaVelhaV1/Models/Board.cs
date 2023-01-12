@@ -11,7 +11,7 @@ namespace JogoDaVelhaV1.Models
     {
         public static char piece = 'X';
         public static int times = 0;
-        private static char[] positions =
+        private char[] positions =
             { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
         private Player player1;
         private Player player2;
@@ -47,7 +47,6 @@ namespace JogoDaVelhaV1.Models
             Console.WriteLine();
             Console.Write("Escolha a posição da peça: ");
         }
-
         public bool PlacePiece(char positionChosed)
         {
             for (int i = 0; i < positions.Length; i++)
@@ -74,6 +73,11 @@ namespace JogoDaVelhaV1.Models
             Console.ReadKey();
             return false;
         }
+        //public void ClearBoard()
+        //{
+        //    char[] chars = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        //    chars.CopyTo(positions, 0);
+        //}
 
         public int checkForVictory()
         {
@@ -118,7 +122,6 @@ namespace JogoDaVelhaV1.Models
 
 
         }
-
         private bool CheckHorizontal()
         {
             bool vitoriaLinha1 = positions[0] == positions[1] && positions[0] == positions[2];
