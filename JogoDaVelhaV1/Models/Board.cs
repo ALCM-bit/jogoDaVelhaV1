@@ -13,13 +13,21 @@ namespace JogoDaVelhaV1.Models
         public static int times = 0;
         private static char[] positions = 
             { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        private Player player1;
+        private Player player2;
 
         public Board()
         {
-
+        }
+        public Board(Player player1, Player player2)
+        {
+            this.player1 = player1;
+            player1.Piece = 'X';
+            this.player2 = player2;
+            player2.Piece = 'O';
         }
 
-        public static void ShowBoard()
+        public void ShowBoard()
         {
             Console.Clear();
             for (int j = 0; j < 3; j++)
@@ -41,7 +49,7 @@ namespace JogoDaVelhaV1.Models
             Console.ReadKey();
         }
 
-        public static bool PlacePiece(char positionChosed)
+        public bool PlacePiece(char positionChosed)
         {
             for (int i = 0; i < positions.Length; i++)
             {
@@ -63,6 +71,44 @@ namespace JogoDaVelhaV1.Models
             Console.WriteLine("Posição Inválida");
             Console.ReadKey();
             return false;
+        }
+
+        public void checkForvictory()
+        {
+            if (CheckHorizontal() == true || CheckDiagonal() == true || CheckVertical() == true)
+            {
+                Console.WriteLine("Vitória de" );
+            }
+            
+
+        }
+
+        private bool CheckHorizontal()
+        {
+            bool vitoriaLinha1 = positions[0] == positions[1] && positions[0] == positions[2];
+            bool vitoriaLinha2 = positions[3] == positions[4] && positions[3] == positions[5];
+            bool vitoriaLinha3 = positions[6] == positions[7] && positions[6] == positions[8];
+
+            return vitoriaLinha1 || vitoriaLinha2 || vitoriaLinha3;
+
+        }
+        private bool CheckVertical()
+        {
+            bool victoryLine1 = positions[0] == positions[3] && positions[0] == positions[6];
+            bool victoryLine2 = positions[1] == positions[4] && positions[1] == positions[7];
+            bool victoryLine3 = positions[2] == positions[5] && positions[2] == positions[8];
+
+            return victoryLine1 || victoryLine2 || victoryLine3;
+
+        }
+        private bool CheckDiagonal()
+        {
+            bool victoryLine1 = positions[0] == positions[4] && positions[0] == positions[8];
+            bool victoryLine2 = positions[2] == positions[4] && positions[2] == positions[6];
+
+
+            return victoryLine1 || victoryLine1;
+
         }
 
     }
