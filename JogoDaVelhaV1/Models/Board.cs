@@ -9,7 +9,7 @@ namespace JogoDaVelhaV1.Models
 {
     public class Board
     {
-        public static char piece = 'X';
+        public char piece = 'X';
         public static int times = 0;
         private char[] positions =
             { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
